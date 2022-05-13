@@ -9,7 +9,7 @@
 <body>
     <?php
         echo 'Boas-vindas! <br>';
-        print 'PHP'
+        echo 'PHP';
     ?>
 </body>
 </html>

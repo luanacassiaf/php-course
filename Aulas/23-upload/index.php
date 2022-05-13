@@ -9,32 +9,31 @@
 <body>
 
 <?php
-    if(isset($_POST['enviar'])):
-        
-        $formatosPermitidos = array("png", "jpeg", "jpg", "gif");
+    if (isset($_POST['enviar'])) {
+        $formatosPermitidos = ['png', 'jpeg', 'jpg', 'gif'];
         $numArquivos = count($_FILES['arquivo']['name']);
         $contador = 0;
 
-        while ($contador < $numArquivos):
+        while ($contador < $numArquivos) {
             $extensao = pathinfo($_FILES['arquivo']['name'][$contador], PATHINFO_EXTENSION);
-            
-            if(in_array($extensao, $formatosPermitidos)):
-                $pasta = "arquivos/";
+
+            if (in_array($extensao, $formatosPermitidos)) {
+                $pasta = 'arquivos/';
                 $temp = $_FILES['arquivo']['tmp_name'][$contador];
-                $novoNome = uniqid().".$extensao";
+                $novoNome = uniqid().".{$extensao}";
 
-                if(move_uploaded_file($temp, $pasta.$novoNome)):
-                    echo "Upload feito com sucesso em $pasta.$novoNome. <br>";
-                else:
-                    echo "Erro ao enviar arquivo $temp. <br>";
-                endif;
-            else:
-                echo "Extensão $extensao não permitida. <br>";
-            endif;
+                if (move_uploaded_file($temp, $pasta.$novoNome)) {
+                    echo "Upload feito com sucesso em {$pasta}.{$novoNome}. <br>";
+                } else {
+                    echo 'Erro ao enviar arquivo. <br>';
+                }
+            } else {
+                echo "Extensão {$extensao} não permitida. <br>";
+            }
 
-            $contador++;
-        endwhile;
-    endif;
+            ++$contador;
+        }
+    }
 ?>
 
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data">

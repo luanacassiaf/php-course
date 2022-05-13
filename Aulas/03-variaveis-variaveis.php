@@ -1,12 +1,13 @@
 <?php
-$bebida = "refrigerante";
 
-$$bebida = "Guaraná";
+$bebida = 'refrigerante';
+
+${$bebida} = 'Guaraná';
 
 echo $refrigerante;
-echo "<br>";
+echo '<br>';
 
-$destino = "cidade";
-$$destino = "Ilhéus";
+$destino = 'cidade';
+${$destino} = 'Ilhéus';
 
 echo $cidade;

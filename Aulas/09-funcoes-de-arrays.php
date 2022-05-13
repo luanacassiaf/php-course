@@ -1,17 +1,18 @@
 <?php
-$pokemons = array("Fogo" => "Charmander", "Água" => "Squirtle", "Planta" => "Bulbasaur");
 
-if(is_array($pokemons)):
-    echo "É um array. <br>";
-else:
-    echo "Não é array. <br>";
-endif;
+$pokemons = ['Fogo' => 'Charmander', 'Água' => 'Squirtle', 'Planta' => 'Bulbasaur'];
 
-if(in_array("Pichu", $pokemons)):
-    echo "Existe no array. <br>";
-else:
-    echo "Não existe no array. <br>";
-endif;
+if (is_array($pokemons)) {
+    echo 'É um array. <br>';
+} else {
+    echo 'Não é array. <br>';
+}
+
+if (in_array('Pichu', $pokemons)) {
+    echo 'Existe no array. <br>';
+} else {
+    echo 'Não existe no array. <br>';
+}
 echo '<hr>';
 
 // Índices do array pokemons são valores do array keys
@@ -24,8 +25,8 @@ $values = array_values($pokemons);
 print_r($values);
 echo '<hr>';
 
-$agua = array("Squirtle", "Totodile", "Piplup");
-$fogo = array("Charmander", "Cyndaquil", "Torchic");
+$agua = ['Squirtle', 'Totodile', 'Piplup'];
+$fogo = ['Charmander', 'Cyndaquil', 'Torchic'];
 
 // União dos elementos de dois arrays
 $uniao = array_merge($agua, $fogo);
@@ -33,22 +34,22 @@ print_r($uniao);
 echo '<hr>';
 
 // Apaga elementos do final do array
-echo array_pop($uniao) . '<br>';
+echo array_pop($uniao).'<br>';
 print_r($uniao);
 echo '<hr>';
 
 // Apaga elementos do início do array
-echo array_shift($uniao) . '<br>';
+echo array_shift($uniao).'<br>';
 print_r($uniao);
 echo '<hr>';
 
 // Adiciona elementos no início do array
-array_unshift($uniao, "Pikachu", "Chikorita");
+array_unshift($uniao, 'Pikachu', 'Chikorita');
 print_r($uniao);
 echo '<hr>';
 
 // Adiciona elementos no final do array
-array_push($uniao, "Eevee");
+array_push($uniao, 'Eevee');
 print_r($uniao);
 echo '<hr>';
 
@@ -62,17 +63,17 @@ print_r($equipe);
 echo '<hr>';
 
 // Soma elementos numéricos de array
-$soma = array(5.5, 4.4, 3.3 );
+$soma = [5.5, 4.4, 3.3];
 echo array_sum($soma);
 echo '<hr>';
 
 // Transforma string em array
-$data = "02/10/2020";
-$novaData = explode("/", $data);
+$data = '02/10/2020';
+$novaData = explode('/', $data);
 print_r($novaData);
 echo '<hr>';
 
-$passaros = array("Moltres", "Zapdos", "Articuno");
-$string = implode(", ", $passaros);
+$passaros = ['Moltres', 'Zapdos', 'Articuno'];
+$string = implode(', ', $passaros);
 echo $string;
 echo '<hr>';

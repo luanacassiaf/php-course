@@ -1,19 +1,21 @@
 <?php
 
-function exibirNome($nome) {
-    echo "Nome: $nome";
+function exibirNome($nome)
+{
+    echo "Nome: {$nome}";
 }
 
-exibirNome("Luana");
+exibirNome('Luana');
 echo '<hr>';
 
-function calcularMedia($nome, $n1, $n2, $n3, $n4) {
+function calcularMedia($nome, $n1, $n2, $n3, $n4)
+{
     $media = ($n1 + $n2 + $n3 + $n4) / 4;
-    if($media >= 6):
-        echo "$nome foi aprovado(a) com a média $media. <br>";
-    else:
-        echo "$nome foi reprovado(a) com a média $media. <br>";
-    endif;
+    if ($media >= 6) {
+        echo "{$nome} foi aprovado(a) com a média {$media}. <br>";
+    } else {
+        echo "{$nome} foi reprovado(a) com a média {$media}. <br>";
+    }
 }
 
 calcularMedia('Pikachu', 8, 7, 6, 5);

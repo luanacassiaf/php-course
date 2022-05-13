@@ -8,37 +8,37 @@
 </head>
 <body>
     <?php
-        if(isset($_POST['enviar'])):
-            $erros = array();
-            
-            if(!$idade = filter_input(INPUT_POST, 'idade', FILTER_VALIDATE_INT)):
-                $erros[] = "Idade precisa ser inteiro.";
-            endif;
+        if (isset($_POST['enviar'])) {
+            $erros = [];
 
-            if(!$peso = filter_input(INPUT_POST, 'peso', FILTER_VALIDATE_FLOAT)):
-                $erros[] = "Peso precisa ser float.";
-            endif;
+            if (!$idade = filter_input(INPUT_POST, 'idade', FILTER_VALIDATE_INT)) {
+                $erros[] = 'Idade precisa ser inteiro.';
+            }
 
-            if(!$altura = filter_input(INPUT_POST, 'altura', FILTER_VALIDATE_FLOAT)):
-                $erros[] = "Altura precisa ser float.";
-            endif;
+            if (!$peso = filter_input(INPUT_POST, 'peso', FILTER_VALIDATE_FLOAT)) {
+                $erros[] = 'Peso precisa ser float.';
+            }
 
-            if(!$ip = filter_input(INPUT_POST, 'ip', FILTER_VALIDATE_IP)):
-                $erros[] = "IP inválido.";
-            endif;
+            if (!$altura = filter_input(INPUT_POST, 'altura', FILTER_VALIDATE_FLOAT)) {
+                $erros[] = 'Altura precisa ser float.';
+            }
 
-            if(!$url = filter_input(INPUT_POST, 'url', FILTER_VALIDATE_URL)):
-                $erros[] = "URL inválida.";
-            endif;
+            if (!$ip = filter_input(INPUT_POST, 'ip', FILTER_VALIDATE_IP)) {
+                $erros[] = 'IP inválido.';
+            }
 
-            if(!empty($erros)):
-                foreach ($erros as $erro):
-                    echo "<li> $erro </li>";
-                endforeach;
-            else:
+            if (!$url = filter_input(INPUT_POST, 'url', FILTER_VALIDATE_URL)) {
+                $erros[] = 'URL inválida.';
+            }
+
+            if (!empty($erros)) {
+                foreach ($erros as $erro) {
+                    echo "<li> {$erro} </li>";
+                }
+            } else {
                 echo 'Dados corretos';
-            endif;
-        endif;
+            }
+        }
     ?>
 
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">

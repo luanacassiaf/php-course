@@ -1,11 +1,12 @@
 <?php
+
 // Escopo global
-$nome = "Luana";
+$nome = 'Luana';
 $a = 1;
 $b = 3;
 $c = 7;
 
-function exibeNome() 
+function exibeNome()
 {
     // Escopo local
     global $nome;
@@ -15,9 +16,7 @@ function exibeNome()
 exibeNome();
 echo '<hr>';
 
-/*************************************/
-
-function exibeCidade() 
+function exibeCidade()
 {
     global $cidade;
     $cidade = 'Townsville';
@@ -26,8 +25,6 @@ function exibeCidade()
 exibeCidade();
 echo $cidade;
 echo '<hr>';
-
-/*************************************/
 
 function soma()
 {
