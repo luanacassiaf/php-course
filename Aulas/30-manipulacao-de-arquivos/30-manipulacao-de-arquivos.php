@@ -12,8 +12,8 @@ fclose($openFile);
 $openFile = fopen($file, 'r');
 $size = filesize($file);
 
-while(!feof($openFile)) {
+while (!feof($openFile)) {
     $linha = fgets($openFile, $size);
-    echo $linha . '<br>';
+    echo $linha.'<br>';
 }
 fclose($openFile);
