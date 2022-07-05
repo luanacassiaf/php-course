@@ -2,7 +2,7 @@
 Curso de PHP 7.  
 Executado com utilização da pilha LAMP (Linux, Apache, MySQL, PHP).  
 
-Implementado em PHP procedural um sistema CRUD (create, read, update, delete) de clientes com utilização do framework Materialize.    
+Implementado um sistema CRUD (create, read, update, delete) de clientes em PHP procedural, com utilização do framework Materialize.    
 
 <div align="center">
   <a href="https://github.com/luanacassiaf/PHP/tree/main/Projetos/CRUD%20Clientes">
