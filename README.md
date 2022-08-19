@@ -1,4 +1,4 @@
-# PHP
+# php-course
 Curso de PHP 7.  
 Executado com utilização da pilha LAMP (Linux, Apache, MySQL, PHP).  
 
